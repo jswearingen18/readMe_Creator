@@ -2,6 +2,36 @@
 const inquirer = require('inquirer');
 const fs = require("fs")
 // TODO: Create an array of questions for user input
+const generateReadme = ({name, description, badges, visuals, usage, support, roadmap, contributions, authors, license}) => 
+`# ${name}
+
+## Description
+${description}
+
+## Badges
+${badges}
+
+## Visuals
+${visuals}
+
+## Usage
+${usage}
+
+## Support
+${support}
+
+## Roadmap
+${roadmap}
+
+## Contributions
+${contributions}
+
+## Authors and acknowledgment
+${authors}
+
+## License
+${license}`;
+
 inquirer.prompt([
 {
     name: "name",
@@ -53,10 +83,16 @@ inquirer.prompt([
     message: "How is it licensed?",
     type: "input",
 }
-]);
+])
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+.then((answers) => {
+    const readmeContent = generateReadme(answers);
+
+    fs.writeFile("README.md", readmeContent, (err) =>
+    err ? console.log(err) : console.log("Successfully created README.md!")
+    );
+});
 
 // TODO: Create a function to initialize app
 //function init() {}
