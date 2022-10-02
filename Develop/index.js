@@ -2,13 +2,64 @@
 const inquirer = require('inquirer');
 const fs = require("fs")
 // TODO: Create an array of questions for user input
-const questions = [];
+inquirer.prompt([
+{
+    name: "name",
+    message: "What would you like the name of the program to be?",
+    type: "input",
+},
+{
+    name: "description",
+    message: "Please give a description of the program.",
+    type: "input",
+},
+{
+    name: "badges",
+    message: "Are their any badges you would like to add?",
+    type: "input",
+},
+{
+    name: "visuals",
+    message: "Are their any visuals you would like to display?",
+    type: "input",
+},
+{
+    name: "usage",
+    message: "What is the purpose of the program?",
+    type: "input",
+},
+{
+    name: "support",
+    message: "Where can users find further support or help with program?",
+    type: "input",
+},
+{
+    name: "roadmap",
+    message: "What is the roadmap for this program?",
+    type: "input",
+},
+{
+    name: "contributions",
+    message: "List any contributions user will accept here.",
+    type: "input",
+},
+{
+    name: "authors",
+    message: "Who are the authors of the program?",
+    type: "input",
+},
+{
+    name: "license",
+    message: "How is it licensed?",
+    type: "input",
+}
+]);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-init();
+//init();
