@@ -8,6 +8,12 @@ const generateReadme = ({name, description, badges, visuals, usage, support, roa
 ## Description
 ${description}
 
+## Github URL link
+${url}
+
+## Github Repository link
+${repo}
+
 ## Badges
 ${badges}
 
@@ -41,6 +47,16 @@ inquirer.prompt([
 {
     name: "description",
     message: "Please give a description of the program.",
+    type: "input",
+},
+{
+    name: "url",
+    message: "What is your Github URL link?",
+    type: "input",
+},
+{
+    name: "repo",
+    message: "What is your Github Repository link?",
     type: "input",
 },
 {
