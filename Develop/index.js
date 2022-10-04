@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs")
 // TODO: Create an array of questions for user input
-const generateReadme = ({name, description, badges, visuals, usage, support, roadmap, contributions, authors, license}) => 
+const generateReadme = ({name, description, url, repo, badges, visuals, usage, support, roadmap, contributions, authors, license}) => 
 `# ${name}
 
 ## Description
